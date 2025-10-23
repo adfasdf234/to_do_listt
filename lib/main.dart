@@ -65,8 +65,12 @@ class _HomepageState extends State<Homepage> {
                 itemBuilder: (context, index) {
                   return ToDoview(
                     toDo: list,
-                    onToggleDone: () => toggleDone(index),
-                    onToggleFavorite: () => toggleFavorite(index),
+                    onToggleDone: () {
+                      toggleDone(index);
+                    },
+                    onToggleFavorite: () {
+                      toggleFavorite(index);
+                    },
                     index: index,
                   );
                 },
